@@ -13,6 +13,6 @@ class ProductController @Autowired constructor(private val productSearchService:
 
     @GetMapping("/products")
     fun performProductSearch(@RequestParam searchTerm: String): SearchResult<ProductDetails> {
-        return productSearchService.performProductSearch(searchTerm);
+        return productSearchService.performProductSearch(searchTerm)
     }
 }
